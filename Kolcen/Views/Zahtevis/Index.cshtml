@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Kolcen.Models.Zahtevi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Zaposleni.Ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpisProblema)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrojKlijenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResenjeProblema)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zaposleni.Ime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpisProblema)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrojKlijenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResenjeProblema)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ZahteviID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ZahteviID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ZahteviID })
+        </td>
+    </tr>
+}
+
+</table>

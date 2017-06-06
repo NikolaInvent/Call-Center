@@ -1,0 +1,50 @@
+﻿@model Kolcen.Models.Zahtevi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Zahtevi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Zaposleni.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zaposleni.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpisProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpisProblema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrojKlijenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrojKlijenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResenjeProblema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResenjeProblema)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ZahteviID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
